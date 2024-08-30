@@ -22,6 +22,7 @@ requirements:
     - hatchling
   run:
     - python >=3.8
+    - airflow-ha
     - apache-airflow >=2,<3
     - colorlog
     - hydra-core
