@@ -1,13 +1,13 @@
 {% set name = "airflow-supervisor" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/a/airflow-supervisor/airflow_supervisor-{{ version }}.tar.gz
-  sha256: 17a698383f5fea43e872938b59acd3da2dad3181cc780b23df19e266ecac8125
+  url: https://pypi.org/packages/source/a/airflow-supervisor/airflow_supervisor-{{ version }}.tar.gz
+  sha256: a46ee24df1cf33386f68c23db18bbd73f5a5056bf7768aa3d7c5af7c55ab880b
 
 build:
   number: 0
@@ -17,11 +17,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - airflow-ha
     - apache-airflow >=2,<3
     - colorlog
@@ -36,6 +36,7 @@ requirements:
 
 test:
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
