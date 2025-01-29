@@ -22,8 +22,6 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - airflow-ha
-    - apache-airflow >=2,<3
     - colorlog
     - hydra-core
     - jinja2
@@ -33,6 +31,8 @@ requirements:
     - typer
   run_constrained:
     - airflow-config >=0.1.2
+    - airflow-ha >=1
+    - apache-airflow >=2.8,<3
 
 test:
   requires:
