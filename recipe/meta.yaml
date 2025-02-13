@@ -27,6 +27,7 @@ requirements:
     - airflow-common-operators >=0.2.0,<0.3
     - airflow-ha >=1
     - apache-airflow >=2.8,<3
+    - apache-airflow-providers-ssh
     - supervisor-pydantic >=1.1,<1.2
 
 test:
