@@ -1,5 +1,6 @@
 {% set name = "airflow-supervisor" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.2" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/airflow-supervisor/airflow_supervisor-{{ version }}.tar.gz
-  sha256: ae9a03e34b75477cef5e06e62182adcbd88d144c70d8753b913c64775b948ae4
+  sha256: 39f9753ac287b382e9a8f6f8aef63e8e739598900ddee3800d1cac72499a3829
 
 build:
   number: 0
@@ -22,17 +23,12 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - colorlog
-    - hydra-core
-    - jinja2
-    - omegaconf
-    - pydantic >=2
-    - rich
-    - typer
-  run_constrained:
     - airflow-config >=0.1.2
+    - airflow-common-operators >=0.2.0,<0.3
     - airflow-ha >=1
     - apache-airflow >=2.8,<3
+    - apache-airflow-providers-ssh
+    - supervisor-pydantic >=1.1,<1.2
 
 test:
   requires:
