@@ -25,6 +25,7 @@ requirements:
     - python >={{ python_min }}
     - airflow-config >=0.1.2
     - airflow-common-operators >=0.2.0,<0.3
+    - airflow-ha >=1
     - apache-airflow >=2.8,<3
     - supervisor-pydantic >=1.1,<1.2
 
