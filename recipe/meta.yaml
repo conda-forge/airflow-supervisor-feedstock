@@ -22,17 +22,10 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - colorlog
-    - hydra-core
-    - jinja2
-    - omegaconf
-    - pydantic >=2
-    - rich
-    - typer
-  run_constrained:
     - airflow-config >=0.1.2
-    - airflow-ha >=1
+    - airflow-common-operators >=0.2.0,<0.3
     - apache-airflow >=2.8,<3
+    - supervisor-pydantic >=1.1,<1.2
 
 test:
   requires:
