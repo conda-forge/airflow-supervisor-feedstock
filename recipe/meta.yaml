@@ -37,6 +37,7 @@ test:
   commands:
     - pip check
   imports:
+    - airflow_ha.operator
     - airflow_supervisor
 
 about:
