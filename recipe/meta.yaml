@@ -1,5 +1,5 @@
 {% set name = "airflow-supervisor" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/airflow-supervisor/airflow_supervisor-{{ version }}.tar.gz
-  sha256: 247c651d5fa93ffac6b297a37a425cb99891a63098e439016606b562ba3e943f
+  sha256: 2c51b1eff5e6b3d241b9662bc78c6f24dc97cc5397deb691e67346d015ab02de
 
 build:
   number: 0
