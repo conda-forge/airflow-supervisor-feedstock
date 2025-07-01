@@ -1,5 +1,5 @@
 {% set name = "airflow-supervisor" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.10" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/airflow-supervisor/airflow_supervisor-{{ version }}.tar.gz
-  sha256: 7933f46d4ff3d8859bd774c13a903bd66e83029de55b384a0c8ca68c6b439bd6
+  sha256: 9e65a8b45eb77951fd7abd51f3ded3e5d5148b8b4bc8456d326dce3424385e92
 
 build:
   number: 0
@@ -23,8 +23,9 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - airflow-common-operators >=0.5,<0.6
-    - airflow-ha >=1.4,<1.5
+    - airflow-common-operators >=0.6,<0.7
+    - airflow-ha
+    - airflow-pydantic >=1.2.8,<1.4
     - apache-airflow >=2.8,<3
     - supervisor-pydantic >=1.2.4,<1.3
 
