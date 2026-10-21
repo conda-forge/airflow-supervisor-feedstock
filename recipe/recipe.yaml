@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: airflow-supervisor
-  version: "1.11.1"
+  version: "1.11.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/a/airflow-supervisor/airflow_supervisor-${{ version }}.tar.gz
-  sha256: 34b25a26372e5edaddc79504c2129624b0cf29f57cadd1e7cc7d1c878647c129
+  sha256: 29616c832bb606776422f5224089fcf74bbf481631da0c54c0fa4570355b0fea
 
 build:
   number: 0
