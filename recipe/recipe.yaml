@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: airflow-supervisor
-  version: "1.12.2"
+  version: "1.13.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/a/airflow-supervisor/airflow_supervisor-${{ version }}.tar.gz
-  sha256: c466e85c49364e0841663c7180c01e3e613808936c81029d081b10c0b7da84cf
+  sha256: d5b8d7286842145ce5253b12de54adde80d093cf6e5421799baacdf3b5c3fdaa
 
 build:
   number: 0
@@ -27,6 +27,7 @@ requirements:
     - python >=${{ python_min }}
     - airflow-ha >=1.6.5,<1.7
     - airflow-pydantic >=1.7.0,<1.8
+    - jinja2 >=3
     - supervisor-pydantic >=1.5.1,<1.6
 
 tests:
